@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- Para cargar ficheros hay que enviarle cosas con enctype -->
+	<form th:action="@{/savePerson}" method="POST" th:objects="${persona}" enctype="multipart/form-data">
+		<p><input type="hidden" th:field="${persona.id}"></p>
+		<p><input type="text" th:field="${persona.nombre}" placeholder="Nombre"></p>
+		<p><input type="text" th:field="${persona.apellidos}" placeholder="Apellidos"></p>
+		<p><input type="file" name="file"></p>
+		<p><input type="submit"></p>
+	</form>
+</body>
+</html>

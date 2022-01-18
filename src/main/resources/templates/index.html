@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="/addPerson">Create Persona</a>
+	<h1>Listado de personas registradas</h1>
+	<p>file:///home/curso/spring-fileupload-workspace/FileUploadExample/FileUploadExample/src/main/resources/static/images/nagatoro.png</p>
+	<table>
+	<thead>
+		<tr>
+			<th>id</th>
+			<th>nombre</th>
+			<th>apellidos</th>
+			<th>imagen</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each=" p : ${listaPersonas}">
+			<td th:text="${p.id}">id</td>
+			<td th:text="${p.nombre}">nombre</td>
+			<td th:text="${p.apellidos}">apellidos</td>
+			<td><a th:href="@{/getImgByUser/} + ${p.id}">detalles</a></td>
+			<td><img th:href="@{/images/}+${p.foto}" th:alt="@{/images/}+${p.foto}"></td>
+		</tr>
+	</tbody>
+	</table>
+</body>
+</html>
