@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	img{ max-height: 50px; max-width: 50px; }
+</style>
 </head>
 <body>
 	<a href="/addPerson">Create Persona</a>
@@ -23,7 +26,7 @@
 			<td th:text="${p.nombre}">nombre</td>
 			<td th:text="${p.apellidos}">apellidos</td>
 			<td><a th:href="@{/getImgByUser/} + ${p.id}">detalles</a></td>
-			<td><img th:href="@{/images/}+${p.foto}" th:alt="@{/images/}+${p.foto}"></td>
+			<td><img th:src="@{/images/}+${p.foto}" th:alt="@{/images/}+${p.foto}"></td>
 		</tr>
 	</tbody>
 	</table>
