@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-	img{ max-height: 50px; max-width: 50px; }
+	img{ max-height: 75px; max-width: 75px; }
 </style>
 </head>
 <body>
 	<a href="/addPerson">Create Persona</a>
 	<h1>Listado de personas registradas</h1>
-	<p>file:///home/curso/spring-fileupload-workspace/FileUploadExample/FileUploadExample/src/main/resources/static/images/nagatoro.png</p>
+	<p>Con ImagenesConfigurer hemos configurado una ruta a imagenes locales fuera del servidor que no se guardan en cache</p>
 	<table>
 	<thead>
 		<tr>
@@ -26,7 +26,7 @@
 			<td th:text="${p.nombre}">nombre</td>
 			<td th:text="${p.apellidos}">apellidos</td>
 			<td><a th:href="@{/getImgByUser/} + ${p.id}">detalles</a></td>
-			<td><img th:src="@{/images/}+${p.foto}" th:alt="@{/images/}+${p.foto}"></td>
+			<td><img th:src="@{/recursos/}+${p.foto}" th:alt="@{/images/}+${p.foto}"></td>
 		</tr>
 	</tbody>
 	</table>

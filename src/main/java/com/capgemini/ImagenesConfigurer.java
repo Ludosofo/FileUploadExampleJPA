@@ -16,7 +16,7 @@ public class ImagenesConfigurer implements WebMvcConfigurer {
 		// addResourceHandler informa de que puede usar todo en la carpeta recursos
 		// addResourceLocations informa que son archivos locales no en web
 		// INTERESANTE: recursos esta en minus y la ruta en mayusculas inicial ¿porque? Porque el resource Hander es como una variable pero la ruta tiene que ser 100% correcta
-		registry.addResourceHandler("/recursos/**").addResourceLocations("file:"+"/home/curso/Persona/Recursos");
+		registry.addResourceHandler("/recursos/**").addResourceLocations("file:"+"/home/curso/Persona/Recursos/");
 		
 		// P: ¿Por que no buscamos con ruta absoluta?
 		// R: Porque Spring no tiene la configuración para encontrar esa ruta por defecto
