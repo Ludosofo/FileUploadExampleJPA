@@ -6,7 +6,8 @@
 </head>
 <body>
 <!-- images ya supone que estamos en la carpeta de static y extrae los datos necesarios, vamos sobre ruedines -->
-	<img th:alt="${persona.foto}" th:src="@{/images/}+${persona.foto}">
+	<img th:alt="${persona.foto}" th:src="@{/recursos/}+${persona.foto}">
+	<!-- img th:alt="${persona.foto}" th:src="@{/images/}+${persona.foto}"-->
 	<ul>
 		<li th:text="${persona.nombre}"></li>
 		<li th:text="${persona.apellidos}"></li>
