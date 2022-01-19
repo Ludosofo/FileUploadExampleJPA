@@ -12,7 +12,10 @@ public class ImagenesConfigurer implements WebMvcConfigurer {
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		// TODO Auto-generated method stub
 		WebMvcConfigurer.super.addResourceHandlers(registry);
-		registry.addResourceHandler("/recursos/**"); // Añadimos acceso a la carpeta recursos
+		
+		// addResourceHandler informa de que puede usar todo en la carpeta recursos
+		// addResourceLocations informa que son archivos locales no en web 
+		registry.addResourceHandler("/recursos/**").addResourceLocations("file:"+"/home/curso/Persona/Recursos");
 		
 		// P: ¿Por que no buscamos con ruta absoluta?
 		// R: Porque Spring no tiene la configuración para encontrar esa ruta por defecto

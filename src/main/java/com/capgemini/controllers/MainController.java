@@ -53,13 +53,16 @@ public class MainController {
 		// Si la imagen no esta vacia vamos a guardar el archivo en src/main/resources/static/images
 		if(!file.isEmpty()) {
 			// Obtenemos la ruta relativa
+			// //home//curso//Persona//Recursos
 			
-			String rutaAbsoluta = "//home//curso//Persona//Recursos";
 			// Path imagesFolder = Paths.get("src//main//resources//static/images");
 			
 			
 			// Convertimos la ruta relativa a absoluta
-			String rutaAbsoluta = imagesFolder.toFile().getAbsolutePath();
+			// String rutaAbsoluta = imagesFolder.toFile().getAbsolutePath();
+			
+			
+			String rutaAbsoluta = "//home//curso//Persona//Recursos";
 			LOG.info("Esto es rutaAbsoluta: "+rutaAbsoluta);
 			
 			try {
